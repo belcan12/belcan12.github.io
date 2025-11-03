@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Belinda Canovic – Frontendutvecklare</title>
+  <meta name="description" content="Frontend (React/TypeScript). Case-studies, projekt och kontakt. Studerat på Folkuniversitetet, tidigare apputveckling på Lerum Vux." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Belinda Canovic – Frontendutvecklare">
+  <meta property="og:description" content="React/TypeScript. Case-studies, projekt och kontakt.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://belcan12.github.io/">
+
+  <style>
+    :root{
+      --w: 920px; --pad: 16px;
+      --bg: #f7f7f8; --fg: #111; --muted:#555;
+      --card:#fff; --line:#e5e7eb; --btn:#fff; --btnb:#d1d5db;
+      --tagbg:#eef2ff; --tagb:#c7d2fe; --tagfg:#3730a3;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b0c0e; --fg:#f5f5f7; --muted:#b3b3b3;
+        --card:#111318; --line:#23252a; --btn:#14161b; --btnb:#2a2d33;
+        --tagbg:#1b2340; --tagb:#253064; --tagfg:#cbd5ff;
+      }
+    }
+    *{ box-sizing:border-box }
+    body{ font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin:0; color:var(--fg); background:var(--bg); }
+    a{ color:inherit }
+    header{ background:var(--card); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:10 }
+    .wrap{ max-width:var(--w); margin:0 auto; padding:28px var(--pad) }
+    h1{ font-size:28px; margin:0 }
+    nav a{ margin-right:16px; text-decoration:none }
+    nav a:focus-visible, .btn:focus-visible{ outline:2px solid #6da7ff; outline-offset:2px; border-radius:8px }
+    .skip{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden }
+    .skip:focus{ position:static; width:auto; height:auto; padding:6px 10px; background:#ffd; border:1px solid #cc9; border-radius:8px }
+    .hero{ padding:28px var(--pad) }
+    .muted{ color:var(--muted); font-size:14px }
+    .grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:16px }
+    .card{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px }
+    .card h3{ margin:0 0 6px 0; font-size:18px }
+    .tag{ display:inline-block; font-size:12px; background:var(--tagbg); border:1px solid var(--tagb); color:var(--tagfg); padding:2px 8px; border-radius:999px; margin-right:6px }
+    footer{ text-align:center; color:var(--muted); padding:28px 0 }
+
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      border:1px solid var(--btnb);
+      background:var(--btn);
+      text-decoration:none;
+      /* --- Fix för långa URL:er i knappen --- */
+      white-space:normal;
+      overflow-wrap:anywhere;
+      word-break:break-word;
+      max-width:100%;
+      display:block; /* gör att knappen fyller kortets bredd snyggt */
+    }
+    .btn:hover{ filter:brightness(1.05) }
+
+    img.screenshot{ width:100%; height:160px; object-fit:cover; border-radius:8px; border:1px solid var(--line); background:#0a0a0a10 }
+    h2{ margin-top:28px }
+    ul.meta{ list-style:none; padding:0; margin:0; display:flex; gap:8px; flex-wrap:wrap }
+    .pill{ border:1px solid var(--line); border-radius:999px; padding:6px 10px; font-size:13px; background:var(--card) }
+  </style>
+</head>
+<body>
+<a class="skip" href="#main">Hoppa till innehåll</a>
+
+<header aria-label="Sidhuvud">
+  <div class="wrap" role="navigation" aria-label="Huvudnavigering">
+    <h1>Belinda Canovic — Frontendutvecklare</h1>
+    <nav>
+      <a href="#projekt">Projekt</a>
+      <a href="#om">Om</a>
+      <!-- Kontakt öppnar mejlklient -->
+      <a href="mailto:belindacanovic@hotmail.com">Kontakt</a>
+      <a href="https://github.com/belcan12" target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <section class="hero" aria-labelledby="intro">
+    <h2 id="intro" class="visually-hidden" style="position:absolute;left:-9999px">Intro</h2>
+    <p class="muted">
+      Frontend (React/TypeScript). Bygger enkla, snabba UI med fokus på läsbar kod, PR-flöden och små mätbara förbättringar.
+      <strong>Studerat</strong> på Folkuniversitetet (distans); tidigare Apputvecklare på Lerum Vux.
+    </p>
+    <ul class="meta" aria-label="Snabblänkar">
+      <!-- Peka på din senaste PDF (v6) -->
+      <li><a class="pill" href="assets/cv/Belinda-Canovic-CV-v6.pdf" target="_blank" rel="noreferrer">Ladda ner CV (PDF)</a></li>
+      <li><span class="pill">Göteborg · Distansvänlig</span></li>
+      <li><span class="pill">React · TypeScript · AWS</span></li>
+    </ul>
+  </section>
+
+  <section id="projekt" aria-labelledby="projhdr">
+    <h2 id="projhdr">Projekt (case-studies)</h2>
+    <div class="grid">
+      <!-- My Movie Database -->
+      <article class="card" aria-labelledby="p-moviedb">
+        <img class="screenshot" src="assets/img/moviedb.png" alt="Skärmdump: My Movie Database – filmsök och detaljer" />
+        <h3 id="p-moviedb">My Movie Database — Filmdatabas</h3>
+        <p class="muted">HTML, CSS, JavaScript</p>
+        <p>Webapp som efterliknar IMDB: sök filmer, se detaljerade filmsidor och spara favoriter. Hämtar startinnehåll (trailers + topplista) från ett film-API och använder OMDb API för både breda sökningar och imdbID-detaljer. Fokus på tillgänglighet (ALT, semantik) och responsiv design.</p>
+        <p><span class="tag">OMDb API</span><span class="tag">Tillgänglighet</span><span class="tag">Responsiv</span></p>
+        <p>
+          <a class="btn" href="https://github.com/belcan12/MyMovieDatabase" target="_blank" rel="noreferrer">GitHub: https://github.com/belcan12/MyMovieDatabase</a>
+        </p>
+      </article>
+
+      <!-- Where it's @ -->
+      <article class="card" aria-labelledby="p-where">
+        <img class="screenshot" src="assets/img/where-its-at.png" alt="Skärmdump: Where it's @ – event-API" />
+        <h3 id="p-where">Where it’s @ — Events API (Serverless)</h3>
+        <p class="muted">Node, Serverless, AWS</p>
+        <p>Händelse-/biljett-API på AWS: endpoints för event (skapa, lista, uppdatera), biljettlogik och enkel sök/paginering. Data i DynamoDB, API Gateway + Lambda och statiska resurser i S3. Fokus på validering, robust felhantering och ren endpoint-struktur som är lätt att dokumentera och testa.</p>
+        <p><span class="tag">API Gateway</span><span class="tag">Lambda</span><span class="tag">DynamoDB</span></p>
+        <p>
+          <a class="btn" href="https://github.com/belcan12/whereitsat2" target="_blank" rel="noreferrer">GitHub: https://github.com/belcan12/whereitsat2</a>
+        </p>
+      </article>
+
+      <!-- Bonz.ai -->
+      <article class="card" aria-labelledby="p-bonzai">
+        <img class="screenshot" src="assets/img/bonzai.png" alt="Skärmdump: Bonz.ai – hotellbokning API" />
+        <h3 id="p-bonzai">Bonz.ai — Hotel Booking API</h3>
+        <p class="muted">Node, Serverless, DynamoDB</p>
+        <p>Boknings-API för hotell: sök lediga rum efter datum, skapa/avboka bokningar och beräkna pris med regler (t.ex. säsong/helg). Node/Serverless med DynamoDB. Fokus på datum-edge cases, inputvalidering och tydliga JSON-svar som är enkla att konsumera i en frontend.</p>
+        <p><span class="tag">Validering</span><span class="tag">Prisregler</span><span class="tag">Tests</span></p>
+        <p>
+          <a class="btn" href="https://github.com/belcan12/bonzai" target="_blank" rel="noreferrer">GitHub: https://github.com/belcan12/bonzai</a>
+        </p>
+      </article>
+
+      <!-- FlappyBird2 -->
+      <article class="card" aria-labelledby="p-flappy">
+        <img class="screenshot" src="assets/img/flappybird2.png" alt="Skärmdump: FlappyBird2 – 2D-spel" />
+        <h3 id="p-flappy">FlappyBird2 — 2D-spel</h3>
+        <p class="muted">JavaScript/Kotlin (grundläggande), spel-loop</p>
+        <p>Flappy Bird-klon från studierna: game-loop, gravitation/hoppfysik, hinder som genereras löpande, kollisionsdetektering och poäng med restart-flöde. Fokus på input-hantering, tidsstyrd uppdatering och tydlig separation mellan logik och rendering.</p>
+        <p><span class="tag">Game-loop</span><span class="tag">Kollision</span><span class="tag">Input</span></p>
+        <p>
+          <a class="btn" href="https://github.com/belcan12/FlappyBird2" target="_blank" rel="noreferrer">GitHub: https://github.com/belcan12/FlappyBird2</a>
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="om" aria-labelledby="omhdr">
+    <h2 id="omhdr">Om mig</h2>
+    <p>Frontendutvecklare & apputvecklare med fokus på React/TypeScript. Studerat på Folkuniversitetet (distans) och tidigare Apputveckling på Lerum Vux. Gillar ren, begriplig kod, tydliga PR-flöden och mätbara UI-förbättringar. Erfaren av AWS serverless (Lambda, API Gateway, DynamoDB) och statiska deployer (S3/CloudFront).</p>
+  </section>
+
+  <section id="kontakt" aria-labelledby="khdr">
+    <h2 id="khdr">Kontakt</h2>
+    <p><a href="mailto:belindacanovic@hotmail.com">belindacanovic@hotmail.com</a></p>
+  </section>
+</main>
+
+<footer>
+  © Belinda Canovic · Byggd med HTML/CSS · Hostad på GitHub Pages
+</footer>
+</body>
+</html>
