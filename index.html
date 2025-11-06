@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Belinda Canovic – Frontendutvecklare</title>
+  <title>Belinda – Frontendutvecklare & apputvecklare </title>
   <meta name="description" content="Frontend (React/TypeScript). Case-studies, projekt och kontakt. Studerat på Folkuniversitetet, tidigare apputveckling på Lerum Vux." />
 
   <!-- Open Graph / Social -->
@@ -12,20 +12,22 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://belcan12.github.io/">
 
+  <!-- Tvinga mörkt läge även på mobilens UI -->
+  <meta name="theme-color" content="#0b0c0e">
+
   <style>
     :root{
       --w: 920px; --pad: 16px;
-      --bg: #f7f7f8; --fg: #111; --muted:#555;
-      --card:#fff; --line:#e5e7eb; --btn:#fff; --btnb:#d1d5db;
-      --tagbg:#eef2ff; --tagb:#c7d2fe; --tagfg:#3730a3;
+
+      /* mörk palett som standard */
+      --bg:#0b0c0e; --fg:#f5f5f7; --muted:#b3b3b3;
+      --card:#111318; --line:#23252a; --btn:#14161b; --btnb:#2a2d33;
+      --tagbg:#1b2340; --tagb:#253064; --tagfg:#cbd5ff;
+
+      /* hint till browsern: använd mörka widgets (scrollbars, forminput, etc.) */
+      color-scheme: dark;
     }
-    @media (prefers-color-scheme: dark){
-      :root{
-        --bg:#0b0c0e; --fg:#f5f5f7; --muted:#b3b3b3;
-        --card:#111318; --line:#23252a; --btn:#14161b; --btnb:#2a2d33;
-        --tagbg:#1b2340; --tagb:#253064; --tagfg:#cbd5ff;
-      }
-    }
+    
     *{ box-sizing:border-box }
     body{ font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin:0; color:var(--fg); background:var(--bg); }
     a{ color:inherit }
@@ -87,7 +89,7 @@
     <h2 id="intro" class="visually-hidden" style="position:absolute;left:-9999px">Intro</h2>
     <p class="muted">
       Frontend (React/TypeScript). Bygger enkla, snabba UI med fokus på läsbar kod, PR-flöden och små mätbara förbättringar.
-      <strong>Studerat</strong> på Folkuniversitetet (distans); tidigare Apputvecklare på Lerum Vux.
+      Studerat på Folkuniversitetet (distans); tidigare Apputvecklare på Lerum Vux.
     </p>
     <ul class="meta" aria-label="Snabblänkar">
       <!-- Peka på din senaste PDF (v6) -->
@@ -162,7 +164,7 @@
 </main>
 
 <footer>
-  © Belinda Canovic · Byggd med HTML/CSS · Hostad på GitHub Pages
+  © Belinda portfolio
 </footer>
 </body>
 </html>
