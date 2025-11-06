@@ -47,20 +47,33 @@
     footer{ text-align:center; color:var(--muted); padding:28px 0 }
 
     .btn{
-      display:inline-block;
       padding:10px 14px;
       border-radius:10px;
       border:1px solid var(--btnb);
       background:var(--btn);
       text-decoration:none;
-      /* --- Fix för långa URL:er i knappen --- */
-      white-space:normal;
+      white-space:normal;          /* låter långa URL:er radbrytas */
       overflow-wrap:anywhere;
       word-break:break-word;
       max-width:100%;
-      display:block; /* gör att knappen fyller kortets bredd snyggt */
+      display:block;               /* fyller kortets bredd snyggt */
     }
     .btn:hover{ filter:brightness(1.05) }
+
+    /* Responsiv 16:9-embed för video-demos */
+    .project-demo{
+      position:relative;
+      padding-top:56.25%;          /* 16:9 */
+      border-radius:12px;
+      overflow:hidden;             /* rundade hörn även på iframe */
+      border:1px solid var(--line);
+      background:#0a0a0a10;
+      margin-bottom:10px;
+    }
+    .project-demo iframe{
+      position:absolute; inset:0; width:100%; height:100%;
+      border:0;
+    }
 
     img.screenshot{ width:100%; height:160px; object-fit:cover; border-radius:8px; border:1px solid var(--line); background:#0a0a0a10 }
     h2{ margin-top:28px }
@@ -104,7 +117,18 @@
     <div class="grid">
       <!-- My Movie Database -->
       <article class="card" aria-labelledby="p-moviedb">
-        <img class="screenshot" src="assets/img/moviedb.png" alt="Skärmdump: My Movie Database – filmsök och detaljer" />
+        <!-- VIDEO överst -->
+        <div class="project-demo" aria-label="Demo-video: My Movie Database">
+          <iframe
+            src="https://www.youtube.com/embed/0OJkbM1qZXU?autoplay=1&mute=1&loop=1&playlist=0OJkbM1qZXU"
+            title="My Movie Database – Demo"
+            allow="autoplay; encrypted-media"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+
         <h3 id="p-moviedb">My Movie Database — Filmdatabas</h3>
         <p class="muted">HTML, CSS, JavaScript</p>
         <p>Webapp som efterliknar IMDB: sök filmer, se detaljerade filmsidor och spara favoriter. Hämtar startinnehåll (trailers + topplista) från ett film-API och använder OMDb API för både breda sökningar och imdbID-detaljer. Fokus på tillgänglighet (ALT, semantik) och responsiv design.</p>
@@ -112,11 +136,24 @@
         <p>
           <a class="btn" href="https://github.com/belcan12/MyMovieDatabase" target="_blank" rel="noreferrer">GitHub: https://github.com/belcan12/MyMovieDatabase</a>
         </p>
+        <!-- BILD under knapparna -->
+        <img class="screenshot" src="assets/img/moviedb.png" alt="Skärmdump: My Movie Database – filmsök och detaljer" />
       </article>
 
       <!-- Where it's @ -->
       <article class="card" aria-labelledby="p-where">
-        <img class="screenshot" src="assets/img/where-its-at.png" alt="Skärmdump: Where it's @ – event-API" />
+        <!-- VIDEO överst -->
+        <div class="project-demo" aria-label="Demo-video: Where it’s @">
+          <iframe
+            src="https://www.youtube.com/embed/j0dYpVzhcgo?autoplay=1&mute=1&loop=1&playlist=j0dYpVzhcgo"
+            title="Where it’s @ – Demo"
+            allow="autoplay; encrypted-media"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+
         <h3 id="p-where">Where it’s @ — Events API (Serverless)</h3>
         <p class="muted">Node, Serverless, AWS</p>
         <p>Händelse-/biljett-API på AWS: endpoints för event (skapa, lista, uppdatera), biljettlogik och enkel sök/paginering. Data i DynamoDB, API Gateway + Lambda och statiska resurser i S3. Fokus på validering, robust felhantering och ren endpoint-struktur som är lätt att dokumentera och testa.</p>
@@ -124,6 +161,8 @@
         <p>
           <a class="btn" href="https://github.com/belcan12/whereitsat2" target="_blank" rel="noreferrer">GitHub: https://github.com/belcan12/whereitsat2</a>
         </p>
+        <!-- BILD under knapparna -->
+        <img class="screenshot" src="assets/img/where-its-at.png" alt="Skärmdump: Where it's @ – event-API" />
       </article>
 
       <!-- Bonz.ai -->
